@@ -2,7 +2,7 @@
 #pragma once
 
 // Display (JD9165, MIPI-DSI 2-lane)
-#define NV_PIN_LCD_RESET        5     // GPIO5
+#define NV_PIN_LCD_RESET        0     // GPIO0 (factory BSP value, confirmed via OpenOCD GPIO dump of the stock firmware)
 #define NV_PIN_LCD_BACKLIGHT    23    // GPIO23 (LEDC PWM)
 #define NV_LCD_H_RES            1024
 #define NV_LCD_V_RES            600
@@ -10,7 +10,7 @@
 #define NV_MIPI_LANE_MBPS       750
 #define NV_MIPI_LDO_CHAN        3     // LDO_VO3 -> VDD_MIPI_DPHY
 #define NV_MIPI_LDO_MV          2500
-#define NV_DPI_CLK_MHZ          50
+#define NV_DPI_CLK_MHZ          52    // factory value (50 also displays, but match the stock firmware)
 
 // Touch (GT911) + shared internal I2C bus
 #define NV_PIN_I2C_SDA          7     // GPIO7

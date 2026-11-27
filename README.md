@@ -1,5 +1,26 @@
 # NucleoOS P4 · an operating system for the Guition ESP32-P4 7" touchscreen
 
+> ## This fork: ESP32-P4 **rev v3.x** + "New Panel" support
+>
+> Newer Guition boards (late 2026 batches, including the 10.1" JC1060P470C_I) ship **ESP32-P4
+> revision v3.x silicon** and a **new JD9165 panel batch**. The official NucleoOS binaries are
+> built for rev v0/v1 chips and will not boot on them, and the original panel init sequence
+> shows washed-out vertical stripes on the new glass. This fork makes NucleoOS run on those
+> boards. Changes vs upstream:
+>
+> - `CONFIG_ESP32P4_SELECTS_REV_LESS_V3=n` + `CONFIG_ESP32P4_REV_MIN_300=y` (v0/v1 and v3
+>   builds are mutually exclusive — this fork's binaries will NOT boot on v0/v1 boards)
+> - DSI PHY refclock: rev ≥3.0 uses `MIPI_DSI_PHY_PLLREF_CLK_SRC_DEFAULT` (XTAL)
+> - JD9165 init sequence replaced with Guition's Oct-2026 "New_Panel" table (byte-identical
+>   to the factory V3.8 firmware), LCD reset moved to **GPIO0** (factory BSP value), DPI
+>   52 MHz, hsync 24/136/160, `esp_lcd_jd9165` bumped to 2.x
+> - **Build with ESP-IDF v5.5.6 or newer** — 5.5.2's early rev-3 support cold-boot-fails on
+>   rev 3.2 (USB never enumerates, flash writes corrupt)
+> - **Never install the official OTA updates on a v3.x board** — they are v0/v1 builds; keep
+>   updating from this fork's sources instead
+>
+> Everything below is the upstream README.
+
 **NucleoOS turns the Guition JC1060P470C (ESP32-P4, 7", 1024×600) into a small computer you can
 actually use:** a touch launcher and a classic desktop, an app store with over 400 apps and games,
 an ebook reader with a catalog of free books, a spreadsheet and a word processor, game engines and

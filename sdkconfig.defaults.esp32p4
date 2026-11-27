@@ -1,5 +1,8 @@
 # NucleoOS Anima — ESP32-P4 target: 32MB PSRAM @200MHz
 # (P4 PSRAM type/mode is auto-detected by the ROM; no OCT/TYPE symbols like S3.)
+# Chip revision v3.x (newer Guition boards ship rev 3.2 silicon; mutually exclusive with v0/v1)
+CONFIG_ESP32P4_SELECTS_REV_LESS_V3=n
+CONFIG_ESP32P4_REV_MIN_300=y
 CONFIG_SPIRAM=y
 
 # nv_web serves the whole web OS: give LWIP enough sockets for the browser's parallel boot fetches

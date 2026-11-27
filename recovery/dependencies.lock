@@ -10,7 +10,7 @@ dependencies:
       type: service
     version: 0.5.3
   espressif/esp_lcd_jd9165:
-    component_hash: 8bf6d5388ec272a0b2e1c6fe0bf140f7de0d89bff2a4c6a4f0cd2a05fdcbfd2a
+    component_hash: 1eaeedd3fef31f7a48e932b17833216efe0b87238212cd7468c2e60f7236598c
     dependencies:
     - name: espressif/cmake_utilities
       registry_url: https://components.espressif.com
@@ -24,14 +24,14 @@ dependencies:
       type: service
     targets:
     - esp32p4
-    version: 1.0.3
+    version: 2.0.2
   idf:
     source:
       type: idf
-    version: 5.5.2
+    version: 5.5.6
 direct_dependencies:
 - espressif/esp_lcd_jd9165
 - idf
-manifest_hash: 91cd4eb2c864c522be712db3615d571bcca0c5e0a05c5ac8a56b079dd019229f
+manifest_hash: 0b4aa8ded46f38387f15743ffe6d4a088826c45ae01631aa2958e86b7a0bf953
 target: esp32p4
 version: 2.0.0

@@ -93,7 +93,7 @@ dependencies:
       type: service
     version: 2.12.9
   espressif/esp_lcd_jd9165:
-    component_hash: 8bf6d5388ec272a0b2e1c6fe0bf140f7de0d89bff2a4c6a4f0cd2a05fdcbfd2a
+    component_hash: 1eaeedd3fef31f7a48e932b17833216efe0b87238212cd7468c2e60f7236598c
     dependencies:
     - name: espressif/cmake_utilities
       registry_url: https://components.espressif.com
@@ -107,7 +107,7 @@ dependencies:
       type: service
     targets:
     - esp32p4
-    version: 1.0.3
+    version: 2.0.2
   espressif/esp_lcd_touch:
     component_hash: 3f85a7d95af876f1a6ecca8eb90a81614890d0f03a038390804e5a77e2caf862
     dependencies:
@@ -281,7 +281,7 @@ dependencies:
   idf:
     source:
       type: idf
-    version: 5.5.2
+    version: 5.5.6
   lvgl/lvgl:
     component_hash: 184e532558c1c45fefed631f3e235423d22582aafb4630f3e8885c35281a49ae
     dependencies: []
@@ -311,6 +311,6 @@ direct_dependencies:
 - espressif/wifi_remote_over_eppp
 - idf
 - lvgl/lvgl
-manifest_hash: 3ddc06245800fb08714d78cfb4ed1e069ec21267a7833356c8fd6f32a0042182
+manifest_hash: 244450dc3ef6398ce8301a676fccd36b78e2083e61b85843eefa7c5f0eaf709d
 target: esp32p4
 version: 2.0.0
